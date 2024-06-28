@@ -1,9 +1,8 @@
-
 services:
   airflow:
     image: airflow-test
     volumes:
-      - ./airflow/:opt/airflow
+      - ./airflow:/opt/airflow
     ports:
       - "8080:8080"
     command: airflow standalone
