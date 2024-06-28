@@ -442,3 +442,37 @@ Traceback (most recent call last):
 airflow.exceptions.AirflowException: Use keyword arguments when initializing operators
 [2024-06-28T21:14:52.975+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka-stream.py
 [2024-06-28T21:14:53.049+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka-stream.py took 0.145 seconds
+[2024-06-28T21:15:23.211+0000] {processor.py:161} INFO - Started process (PID=70) to work on /opt/airflow/dags/kafka-stream.py
+[2024-06-28T21:15:23.213+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kafka-stream.py for tasks to queue
+[2024-06-28T21:15:23.215+0000] {logging_mixin.py:188} INFO - [2024-06-28T21:15:23.215+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/kafka-stream.py
+[2024-06-28T21:15:23.258+0000] {logging_mixin.py:188} INFO - [2024-06-28T21:15:23.248+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/kafka-stream.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka-stream.py", line 22, in <module>
+    t1 = PythonOperator('welcome-_log', python_callable=print_welcome, dag=dag)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 443, in apply_defaults
+    raise AirflowException("Use keyword arguments when initializing operators")
+airflow.exceptions.AirflowException: Use keyword arguments when initializing operators
+[2024-06-28T21:15:23.261+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka-stream.py
+[2024-06-28T21:15:23.333+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka-stream.py took 0.131 seconds
+[2024-06-28T21:15:53.912+0000] {processor.py:161} INFO - Started process (PID=71) to work on /opt/airflow/dags/kafka-stream.py
+[2024-06-28T21:15:53.914+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/kafka-stream.py for tasks to queue
+[2024-06-28T21:15:53.917+0000] {logging_mixin.py:188} INFO - [2024-06-28T21:15:53.916+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/kafka-stream.py
+[2024-06-28T21:15:53.951+0000] {logging_mixin.py:188} INFO - [2024-06-28T21:15:53.943+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/kafka-stream.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka-stream.py", line 22, in <module>
+    t1 = PythonOperator('welcome-_log', python_callable=print_welcome, dag=dag)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 443, in apply_defaults
+    raise AirflowException("Use keyword arguments when initializing operators")
+airflow.exceptions.AirflowException: Use keyword arguments when initializing operators
+[2024-06-28T21:15:53.954+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka-stream.py
+[2024-06-28T21:15:54.038+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/kafka-stream.py took 0.138 seconds
