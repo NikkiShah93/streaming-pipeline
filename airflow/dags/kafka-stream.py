@@ -19,10 +19,8 @@ def get_data():
 ## starting with the DAG
 dag = DAG('stream-dag', schedule='@daily', default_args=default_args)
 
-t1 = PythonOperator('welcome-_log', python_callable=print_welcome, dag=dag)
+t1 = PythonOperator('welcome_log', python_callable=print_welcome, dag=dag)
 t2 = PythonOperator('get_data', python_callable=get_data, dag=dag)
 
 ## defining the dependencies
 t1 >> t2
-
-t1
